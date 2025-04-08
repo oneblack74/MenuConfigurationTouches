@@ -53,7 +53,6 @@ Chaque action aura un bouton de rebind dans l’UI.
 
 ```
 Assets/
-├── 
 ├──KeyBinding/
 │  ├── Scripts/
 │  │   └── InputHandler.cs
@@ -70,12 +69,7 @@ Assets/
 
 ## 📌 État du projet
 
-🧪 En développement – fonctionnalités principales en place.
-Des améliorations futures sont prévues pour :
-
-- Sauvegarde/chargement des touches personnalisées
-- Support du gamepad
-- UI plus stylisée
+🧪 En développement
 
 ---
 
