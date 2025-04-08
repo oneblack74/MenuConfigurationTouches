@@ -1,42 +1,88 @@
-# MenuConfigurationTouches
+# 🎮 MenuConfigurationTouches
 
-A Unity project that provides a configurable key binding menu using the Unity InputSystem.
+> 🔧 Un projet Unity qui permet de générer dynamiquement un **menu de configuration des touches** via le nouveau **Input System**.
 
-## Features
+---
 
-- **Key Binding Menu**: Easily configurable key bindings through a dynamically generated menu.
-- **InputSystem Integration**: Utilizes Unity's new InputSystem for handling input actions.
-- **Dynamic UI**: The menu is automatically generated based on the input actions defined in the InputAction asset.
+## ✨ Fonctionnalités principales
 
-## Getting Started
+- 🎛️ **Menu de rebind des touches** entièrement généré dynamiquement
+- ⚙️ Basé sur le **Unity Input System**
+- 🧩 Configuration simple via l’inspecteur
+- 📦 **Prefab de bouton** personnalisable pour l’UI
+- 🧠 Réutilisable dans n’importe quel projet Unity avec InputAction
 
-### Prerequisites
+---
 
-- Unity 2022.3.17f1 (This project was created and tested with this version)
-- Unity InputSystem package
+## 🚀 Getting Started
 
-### Installation
+### ✅ Prérequis
 
-1. Clone the repository to your local machine:
-   ```sh
+- **Unity 2022.3.17f1**
+- Package **Input System** activé dans Unity
+
+---
+
+### 📥 Installation
+
+1. Clonez le projet :
+   ```bash
    git clone https://github.com/oneblack74/MenuConfigurationTouches.git
    ```
+2. Ouvrez le dossier dans Unity
 
-2. Open the project in Unity
+---
 
-### Usage
+## 🕹️ Utilisation
 
-  1. Setting Up the Scene:
-  - Create a new GameObject in your scene and name it InputHandler.
-  - Attach the InputHandler script to this GameObject.
-  - Create a ScrollView under the InputHandler GameObject.
-  - In the InputHandler script, set the following references in the Inspector:
-    - Input Actions: Reference to the InputAction asset that contains your input configurations.
-    - Button Prefab: A prefab for the button used to display and change key bindings.
-    - Content Transform: The Transform component of the Content GameObject inside the ScrollView.
+1. Mise en place de la scène
+- Créez un `GameObject` nommé InputHandler
+- Attachez-lui le script `InputHandler.cs`
+- Ajoutez un ScrollView comme enfant de `InputHandler`
 
-  2. Generating the Menu:
-  - The key binding menu will be automatically generated based on the input actions defined in the InputAction asset.
+Dans l’Inspecteur Unity, renseignez les références dans le script :
+| Champ | Description |
+|-------|-------------|
+| Input Actions | Asset `InputAction` contenant les bindings |
+| Button Prefab | Prefab utilisé pour générer chaque bouton |
+| Content Transform | Transform de l’objet Content du ScrollView |
 
-## Status
-(Project under development)
+2. Génération automatique
+🎉 Le menu se génère automatiquement à partir de l’InputAction asset fourni.
+Chaque action aura un bouton de rebind dans l’UI.
+
+```
+Assets/
+├── 
+├──KeyBinding/
+│  ├── Scripts/
+│  │   └── InputHandler.cs
+│  ├── Prefabs/
+│  │   └── ButtonPrefab.prefab
+│  └── Scenes/
+│      └──SampleScene.unity
+└── Input/
+    └── InputActions.inputactions
+
+```
+
+---
+
+## 📌 État du projet
+
+🧪 En développement – fonctionnalités principales en place.
+Des améliorations futures sont prévues pour :
+
+- Sauvegarde/chargement des touches personnalisées
+- Support du gamepad
+- UI plus stylisée
+
+---
+
+## 👤 Auteur
+
+Axel Brissy
+    🔗 [GitHub](https://github.com/oneblack74)
+
+---
+
